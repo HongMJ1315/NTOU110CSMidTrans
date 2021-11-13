@@ -1,0 +1,314 @@
+\documentclass[a4paper,10pt,twocolumn,oneside]{article}
+\setlength{\columnsep}{10pt}                                                              %兩欄模式的間距
+\setlength{\columnseprule}{0pt}                                                                %兩欄模式間格線粗細
+
+\usepackage{amsthm}								%定義，例題
+\usepackage{amssymb}
+%\usepackage[margin=2cm]{geometry}
+\usepackage{fontspec}								%設定字體
+\usepackage{color}
+% \usepackage{float}
+%\usepackage{subfigure}
+\usepackage[x11names]{xcolor}
+\usepackage{listings}								%顯示code用的
+%\usepackage[Glenn]{fncychap}						%排版，頁面模板
+\usepackage{fancyhdr}								%設定頁首頁尾
+\usepackage{graphicx}								%Graphic
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage[CheckSingle, CJKmath]{xeCJK}
+% \usepackage{CJKulem}
+%\usepackage[T1]{fontenc}
+\titlespacing{\section}{0cm}{0cm}{0cm}
+\titlespacing{\subsection}{0cm}{0cm}{0cm}
+\usepackage{amsmath, courier, listings, fancyhdr, graphicx}
+\topmargin=0pt
+\headsep=5pt
+\textheight=780pt
+\footskip=0pt
+\voffset=-40pt
+\textwidth=545pt
+\marginparsep=0pt
+\marginparwidth=0pt
+\marginparpush=0pt
+\oddsidemargin=0pt
+\evensidemargin=0pt
+\hoffset=-42pt
+
+%\renewcommand\listfigurename{圖目錄}
+%\renewcommand\listtablename{表目錄} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont{Consolas}				%主要字型
+\setmonofont{Monaco}				%主要字型
+\setCJKmainfont{Noto Sans TC}
+%\setCJKmainfont{Consolas}			%中文字型
+%\setmainfont{sourcecodepro}
+\XeTeXlinebreaklocale "zh"						%中文自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
+\setcounter{secnumdepth}{3}						%目錄顯示第三層
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+\@empty\z@\@empty
+\makeatother
+\lstset{											% Code顯示
+language=C++,										% the language of the code
+basicstyle=\footnotesize\ttfamily, 						% the size of the fonts that are used for the code
+%numbers=left,										% where to put the line-numbers
+numberstyle=\footnotesize,						% the size of the fonts that are used for the line-numbers
+stepnumber=1,										% the step between two line-numbers. If it's 1, each line  will be numbered
+numbersep=5pt,										% how far the line-numbers are from the code
+backgroundcolor=\color{white},					% choose the background color. You must add \usepackage{color}
+showspaces=false,									% show spaces adding particular underscores
+showstringspaces=false,							% underline spaces within strings
+showtabs=false,									% show tabs within strings adding particular underscores
+frame=false,											% adds a frame around the code
+tabsize=2,											% sets default tabsize to 2 spaces
+captionpos=b,										% sets the caption-position to bottom
+breaklines=true,									% sets automatic line breaking
+breakatwhitespace=false,							% sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},							% if you want to add a comment within your code
+morekeywords={*},									% if you want to add more keywords to the set
+keywordstyle=\bfseries\color{Blue1},
+commentstyle=\itshape\color{Red4},
+stringstyle=\itshape\color{Green4},
+}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyfoot{}
+%\fancyfoot[R]{\includegraphics[width=20pt]{ironwood.jpg}}
+\lhead{\fontsize{9pt}{9pt}\selectfont National Taiwan Ocean University Computer Science Mid-term Exam Translation}
+\rhead{\fontsize{9pt}{9pt}\selectfont Written By Mr.JB \& Brass}
+% \fancyhead[L]{National Taiwan Ocean University Computer Science Mid-term Exam Translation}
+% \fancyhead[R]{Written By Mr.JB \& Brass}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\contentsname}{Contents} 
+\renewcommand{\footnotesize}{3pt}%设置脚注字体大小
+\scriptsize
+%\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}
+\begin{normalsize}
+    
+    \begin{table}[!]
+        \section{Data Storage}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            VLSI&超大型積體電路\\
+            \hline
+            stream&串流\\
+            \hline
+            hexadecimal&十六進位\\
+            \hline 
+            RAM&隨機存取記憶體\\
+            \hline 
+            DRAM\SDRAM&動態記憶體\\
+            \hline
+            track&磁軌\\
+            \hline
+            cylinder&磁柱\\
+            \hline
+            sector&磁區\\
+            \hline
+            zone-bit recording&分區位元儲存法\\
+            \hline 
+            seek time&搜尋時間\\
+            \hline
+            rotational delay&旋轉延遲\\
+            \hline
+            access time&存取時間\\
+            \hline
+            transfer rate&傳輸速度\\
+            \hline
+            bandwidth&頻寬\\
+            \hline
+            latency&延遲時間\\
+            \hline
+            magnetic tape&磁帶機\\
+            \hline
+            floppy disk drives&軟碟機\\
+            \hline
+            computer-aided design&電腦輔助設計\\
+            \hline
+            raidx point&基數點\\
+            \hline
+            temporal masking&時域遮罩\\
+            \hline
+            frequency masking&頻域遮罩\\
+            \hline
+        \end{tabular}    
+    \end{table}
+    
+    \begin{table}[!]
+        \section{Data Manipulation}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            arithmetic/logic unit&邏輯元件\\
+            \hline
+            control unit&控制元件\\
+            \hline
+            register unit&暫存器元件\\
+            \hline
+            cache memory&快取記憶體\\
+            \hline
+            RISC&精簡指令集計算機\\
+            \hline
+            CISC&複雜指令集計算機\\
+            \hline
+            benchmarkig&評量基準\\
+            \hline
+            circular shift&循環位移\\
+            \hline
+            rotation&循環\\
+            \hline
+            logical shift&邏輯位移\\
+            \hline
+            arithmetic shifts&算數位移\\
+            \hline
+            parallel communication&平行通訊\\
+            \hline
+            serial communication&串列通訊\\
+            \hline
+            modem&數據機\\
+            \hline
+            broadband&寬頻\\
+            \hline
+        \end{tabular}   
+    \end{table}
+    
+    \begin{table}[!]
+        \section{Operating System}
+        \centering
+        \begin{tabular}{|c|c|}    
+            \hline
+            batch processing&批次處理\\
+            \hline
+            interactive processing&交談式處理\\
+            \hline
+            real-time processing&及時處理\\
+            \hline
+            multiprogramming&多程式化\\
+            \hline
+            multitasking&多工\\
+            \hline
+            load balancing&負載平衡\\
+            \hline
+            scaling&分割\\
+            \hline
+            embedded systems&嵌入式系統\\
+            \hline
+            utility software&公用軟體\\
+            \hline
+            kernel&核心\\
+            \hline
+            directory path&目錄路徑\\
+            \hline
+            device drivers&裝置驅動程式\\
+            \hline
+            process table&處理程序表\\
+            \hline
+            context switch&數據交換\\
+            \hline
+            interrupt handler&中斷處置器\\
+            \hline
+            set&(旗標狀態)有\\
+            \hline
+            clear&(旗標狀態)無\\
+            \hline
+            interrupt disable&中斷去能\\
+            \hline
+            interrupt enable&中斷賦能\\
+            \hline
+            semaphore&旗號\\
+            \hline
+            mutual exclusion&互斥\\
+            \hline
+            deadlock&死結\\
+            \hline
+            forking&分叉\\
+            \hline
+            spooling&排存\\
+            \hline
+            administrator&管理者\\
+            \hline
+            auditing software&多稽核軟體\\
+            \hline
+            sniffing software&監聽軟體\\
+            \hline
+            privileged instruction&特權指令\\
+            \hline
+        \end{tabular}  
+    \end{table}
+    
+    \begin{table}[!]
+        \section{Network and Internet}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            personal area network&個人區域網路\\
+            \hline
+            local area network&區域網路\\
+            \hline
+            metropolitan area networ&都會區域網路\\
+            \hline
+            proprietary network&專屬網路\\
+            \hline
+            acess point(AP)&存取點\\
+            \hline
+            hub&集線器\\
+            \hline
+            protocols&協定\\
+            \hline
+            CSNA/CD&載波偵測多重存取碰撞偵測\\
+            \hline
+            CSMA/CA&載波偵測多重存取碰撞避免\\
+            \hline
+            Distributed Coordination&\\
+            Function/DCF&分散式協調功能\\
+            \hline
+            Contention& \\ 
+            Service&競爭式服務\\
+            \hline
+            Point Coordination& \\
+            Function/PCF&集中式協調功能\\
+            \hline
+            Contention-Free Service&無競爭式服務\\
+            \hline
+            repeater&中繼器\\
+            \hline
+            bridge&橋接器\\
+            \hline
+            switch&交換機\\
+            \hline
+            routers&路由器\\
+            \hline
+            forwarding table&轉送表\\
+            \hline
+            gateway&閘道\\
+            \hline
+            client/server&主從模式\\
+            \hline
+            peer-to-peer/P2P&點對點\\
+            \hline
+            swarm&群體\\
+            \hline
+            distributed systems&分散式系統\\
+            \hline
+            cluster computing&叢集計算\\
+            \hline
+            grid computing &網格運算\\
+            \hline
+            elastic compute cloud&彈性雲端運算\\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{document}
